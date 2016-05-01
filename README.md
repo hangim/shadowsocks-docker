@@ -2,7 +2,7 @@
 
 shadowsocks-docker
 
-# Download and Build
+### Download and Build
 
 > ~ $ git clone https://github.com/hangim/shadowsocks-docker.git
 
@@ -10,6 +10,6 @@ shadowsocks-docker
 
 > ~/shadowsocks-docker $ docker build -t ssserver .
 
-# Usage
+### Usage
 
 > ~/shadowsocks-docker $ docker run -p 443:443 --rm -it ssserver
