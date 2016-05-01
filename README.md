@@ -12,5 +12,4 @@ shadowsocks-docker
 
 # Usage
 
-> ~/shadowsocks-docker $ docker run -p 443:443 --rm -it ssserver /usr/local/bin/ssserver -p 443 -k 123456 -m chacha20
-
+> ~/shadowsocks-docker $ docker run -p 443:443 --rm -it ssserver
