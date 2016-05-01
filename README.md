@@ -1,6 +1,10 @@
 # shadowsocks-docker
 
-shadowsocks-docker
+A docker image for shadowsocks server
+
+[Dockerfile](hangim/shadowsocks-docker/blob/master/Dockerfile)
+
+![](https://imagelayers.io/badge/imhang/shadowsocks-docker:latest.svg)
 
 ### Download from Docker Hub 
 
