@@ -2,14 +2,19 @@
 
 shadowsocks-docker
 
-### Download and Build
+### Download from Docker Hub 
 
-> ~ $ git clone https://github.com/hangim/shadowsocks-docker.git
-
-> ~ $ cd shadowsocks-docker/
-
-> ~/shadowsocks-docker $ docker build -t ssserver .
+> ~ $ docker pull imhang/shadowsocks-docker
 
 ### Usage
 
-> ~/shadowsocks-docker $ docker run -p 443:443 --rm -it ssserver
+> ~ $ docker run -p 443:443 --rm -it imhang/shadowsocks-docker
+
+### Default configuration in environment variables
+
+> SERVER_PORT 443
+
+> PASSWORD    123456
+
+> METHOD      chacha20
+
