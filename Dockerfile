@@ -1,14 +1,17 @@
 # Shadowsocks Server Dockerfile
 
-FROM alpine:3.3
+FROM alpine:3.4
 
-RUN apk --no-cache add python python-dev py-pip libsodium
-RUN pip install shadowsocks
+RUN set -ex && \
+    apk add -U --no-cache python python-dev py-pip libsodium && \
+    pip install shadowsocks && \
+    apk del --purge py-pip python-dev && \
+    rm -rf /var/cache/apk/*
 
 ENV SERVER_PORT 443
 ENV PASSWORD    123456
 ENV METHOD      chacha20
 
-EXPOSE $SERVER_PORT
+EXPOSE $SERVER_PORT/tcp $SERVER_PORT/udp
 
 ENTRYPOINT /usr/bin/ssserver -p $SERVER_PORT -k $PASSWORD -m $METHOD
