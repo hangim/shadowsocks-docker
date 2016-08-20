@@ -5,7 +5,6 @@ FROM alpine:3.4
 RUN set -ex && \
     apk add -U --no-cache python python-dev py-pip libsodium && \
     pip install shadowsocks && \
-    apk del --purge py-pip python-dev && \
     rm -rf /var/cache/apk/*
 
 ENV SERVER_PORT 443
