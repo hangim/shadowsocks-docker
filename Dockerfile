@@ -27,5 +27,5 @@ ENV SS_PORT=443 SS_PASSWORD=123456 SS_METHOD=chacha20
 
 EXPOSE $SS_PORT/tcp $SS_PORT/udp
 
-ENTRYPOINT ss-server -p $SS_PORT -k $SS_PASSWORD -m $SS_METHOD -u --fast-open
+ENTRYPOINT ss-server -p $SS_PORT -k $SS_PASSWORD -m $SS_METHOD -d 8.8.8.8 -u --fast-open
 
