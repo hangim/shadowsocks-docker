@@ -16,9 +16,9 @@ or running as a service
 
 ### Default configuration in environment variables
 
-    SS_PORT=443
+    SS_PORT     443
     
-    SS_PASSWORD=123456
+    SS_PASSWORD 123456
     
-    SS_METHOD=chacha20
+    SS_METHOD   chacha20
 
