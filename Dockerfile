@@ -23,9 +23,9 @@ RUN \
     && rm -rf shadowsocks-libev-$SS_VER \
     && apk del .build-deps
 
-ENV SS_PORT=443 SS_PASSWORD=123456 SS_METHOD=chacha20
+ENV SS_PORT=443 SS_PASSWORD=123456 SS_METHOD=chacha20 SS_TIMEOUT=300
 
 EXPOSE $SS_PORT/tcp $SS_PORT/udp
 
-ENTRYPOINT ss-server -p $SS_PORT -k $SS_PASSWORD -m $SS_METHOD -d 8.8.8.8 -u --fast-open -v
+ENTRYPOINT ss-server -p $SS_PORT -k $SS_PASSWORD -m $SS_METHOD -t SS_TIMEOUT -d 8.8.8.8 -u --fast-open -v
 
