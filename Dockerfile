@@ -2,7 +2,7 @@
 
 FROM alpine:3.4
 
-ENV SS_VER 2.5.0
+ENV SS_VER 2.5.2
 
 RUN \
     apk add --no-cache --virtual .build-deps \
@@ -14,6 +14,9 @@ RUN \
         openssl-dev \
         asciidoc \
         xmlto \
+        pcre-dev \
+    && apk add --no-cache --virtual .run-deps \
+        pcre \
     && curl -fSL https://github.com/shadowsocks/shadowsocks-libev/archive/v$SS_VER.tar.gz | tar xz \
     && cd shadowsocks-libev-$SS_VER \
     && ./configure \
