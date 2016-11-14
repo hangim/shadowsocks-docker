@@ -21,6 +21,6 @@ or running as a service
     
     SS_PASSWORD 123456
     
-    SS_METHOD   chacha20
+    SS_METHOD   chacha20-ietf
 
     SS_TIMEOUT  600
