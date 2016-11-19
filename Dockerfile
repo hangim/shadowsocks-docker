@@ -17,7 +17,7 @@ RUN \
         pcre-dev \
     && apk add --no-cache --virtual .run-deps \
         pcre \
-    && curl -fSL https://github.com/shadowsocks/shadowsocks-libev/archive/v$SS_VER.tar.gz | tar xz \
+    && curl -fsSL https://github.com/shadowsocks/shadowsocks-libev/archive/v$SS_VER.tar.gz | tar xz \
     && cd shadowsocks-libev-$SS_VER \
     && ./configure \
     && make \
