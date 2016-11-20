@@ -1,6 +1,6 @@
 # shadowsocks-docker
 
-A docker image for shadowsocks server
+A docker image for [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev) server
 
 ### Download from Docker Hub 
 
