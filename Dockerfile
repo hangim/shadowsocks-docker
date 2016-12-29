@@ -2,7 +2,7 @@
 
 FROM alpine:3.4
 
-ENV SS_VER 2.5.6
+ENV SS_VER 2.6.0
 
 RUN \
     apk add --no-cache --virtual .build-deps \
