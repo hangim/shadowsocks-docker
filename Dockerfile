@@ -1,6 +1,6 @@
 # Shadowsocks Server Dockerfile
 
-FROM alpine
+FROM alpine:3.4
 
 ENV SS_VER 2.6.1
 
