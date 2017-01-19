@@ -1,6 +1,6 @@
 # Shadowsocks Server Dockerfile
 
-FROM alpine:3.4
+FROM alpine:3.5
 
 ENV SS_VER 2.6.1
 
@@ -11,7 +11,8 @@ RUN \
         build-base \
         libtool \
         linux-headers \
-        openssl-dev \
+        libressl-dev \
+        zlib-dev \
         asciidoc \
         xmlto \
         pcre-dev \
