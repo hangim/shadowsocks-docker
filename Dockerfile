@@ -2,10 +2,11 @@
 
 FROM alpine:3.5
 
-ENV SS_VER 3.0.0
+ARG SS_VER=3.0.0
 
 RUN \
-    apk add --no-cache --virtual .build-deps \
+    set -ex \
+    && apk add --no-cache --virtual .build-deps \
         curl \
         autoconf \
         build-base \
