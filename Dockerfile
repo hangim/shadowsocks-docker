@@ -2,7 +2,7 @@
 
 FROM alpine:3.5
 
-ENV SS_VER 2.6.2
+ENV SS_VER 3.0.0
 
 RUN \
     apk add --no-cache --virtual .build-deps \
@@ -16,9 +16,18 @@ RUN \
         asciidoc \
         xmlto \
         pcre-dev \
+        automake \
+        mbedtls-dev \
+        libsodium-dev \
+        udns-dev \
+        libev-dev \
     && apk add --no-cache --virtual .run-deps \
         pcre \
-    && curl -fsSL https://github.com/shadowsocks/shadowsocks-libev/archive/v$SS_VER.tar.gz | tar xz \
+        libev \
+        udns \
+        libsodium \
+        mbedtls \
+    && curl -fsSL https://github.com/shadowsocks/shadowsocks-libev/releases/download/v$SS_VER/shadowsocks-libev-$SS_VER.tar.gz | tar xz \
     && cd shadowsocks-libev-$SS_VER \
     && ./configure \
     && make \
