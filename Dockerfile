@@ -2,7 +2,7 @@
 
 FROM alpine:3.5
 
-ARG SS_VER=3.0.8
+ARG SS_VER=3.1.0
 
 RUN \
     set -ex \
@@ -20,12 +20,12 @@ RUN \
         automake \
         mbedtls-dev \
         libsodium-dev \
-        udns-dev \
+        c-ares-dev \
         libev-dev \
     && apk add --no-cache --virtual .run-deps \
         pcre \
         libev \
-        udns \
+        c-ares \
         libsodium \
         mbedtls \
     && curl -fsSL https://github.com/shadowsocks/shadowsocks-libev/releases/download/v$SS_VER/shadowsocks-libev-$SS_VER.tar.gz | tar xz \
