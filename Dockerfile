@@ -1,6 +1,6 @@
 # Shadowsocks Server Dockerfile
 
-FROM alpine:3.6
+FROM alpine:3.7
 
 ARG SS_VER=3.1.1
 
