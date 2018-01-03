@@ -2,7 +2,7 @@
 
 FROM alpine:3.7
 
-ARG SS_VER=3.1.1
+ARG SS_VER=3.1.2
 
 RUN \
     set -ex \
