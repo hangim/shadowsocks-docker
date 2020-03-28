@@ -13,7 +13,7 @@ A docker image for [shadowsocks-libev](https://github.com/shadowsocks/shadowsock
 
 or running as a service
 
-    docker run -d --restart=always -e "SS_PORT=443" -e "SS_PASSWORD=123456" -e "SS_METHOD=chacha20" -e "SS_TIMEOUT=600" -p 443:443 -p 443:443/udp --name ssserver imhang/shadowsocks-docker
+    docker run -d --restart=always -e "SS_PORT=443" -e "SS_PASSWORD=123456" -e "SS_METHOD=chacha20-ietf-poly1305" -e "SS_TIMEOUT=600" -p 443:443 -p 443:443/udp --name ssserver imhang/shadowsocks-docker
 
 ### Default configuration in environment variables
 
@@ -21,6 +21,6 @@ or running as a service
     
     SS_PASSWORD 123456
     
-    SS_METHOD   chacha20
+    SS_METHOD   chacha20-ietf-poly1305
 
     SS_TIMEOUT  600
